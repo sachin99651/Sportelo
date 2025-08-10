@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sportelo - Hockey Match Panel</title>
+  <link rel="stylesheet" href="{% static 'css/nav_style.css' %}">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    /* Header */
+    /* Tabs */
+    .match-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 25px 0 10px;
+      border-bottom: 2px solid #eee;
+    }
+
+    .match-tab {
+      padding: 10px;
+      font-weight: 500;
+      color: #333;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .match-tab.active {
+      color: #e63946;
+    }
+
+    .match-tab.active::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #e63946;
+      bottom: -2px;
+      left: 0;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .section h2 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .match-card {
+      background-color: #fff;
+      padding: 15px 20px;
+      border-left: 5px solid #f7dd72;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .match-details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .teams {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .time {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .scoreboard-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .scoreboard-table th,
+    .scoreboard-table td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    .scoreboard-table th {
+      background-color: #f7dd72;
+      color: #333;
+    }
+
+    /* Footer */
+  
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">SPORTELO</div>
+    <nav>
+      <ul>
+        <li><a href="/user/matches" class="active">Matches</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Teams</a></li>
+        <li><a href="/rankings">Ranking</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        
+      </ul>
+    </nav>
+    <button class="btn-register" ><a href="/user/profile" style="text-decoration: none; color: #fff;">Profile</a></button>
+  </header>
+
+  <!-- Tabs -->
+  <div class="match-tabs">
+    <div class="match-tab active">Live Matches</div>
+    <div class="match-tab">Upcoming Matches</div>
+    <div class="match-tab">Player Scoreboard</div>
+  </div>
+
+  <!-- Live Matches -->
+  <div class="section">
+    <h2>Live Matches</h2>
+    <div class="match-card">
+      <div class="match-details">
+        <div class="teams">Team Alpha vs Team Beta</div>
+        <div class="time">Live - 2nd Half (42:30)</div>
+      </div>
+      <div class="score">Team Alpha: 2 - Team Beta: 1</div>
+    </div>
+  </div>
+
+  <!-- Upcoming Matches -->
+  <div class="section">
+    <h2>Upcoming Matches</h2>
+    <div class="match-card">
+      <div class="match-details">
+        <div class="teams">Team C vs Team D</div>
+        <div class="time">Today at 6:00 PM</div>
+      </div>
+    </div>
+    <div class="match-card">
+      <div class="match-details">
+        <div class="teams">Team E vs Team F</div>
+        <div class="time">Tomorrow at 4:30 PM</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Player Scoreboard -->
+  <div class="section">
+    <h2>Player Scoreboard</h2>
+    <table class="scoreboard-table">
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th>Team</th>
+          <th>Goals</th>
+          <th>Assists</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John Doe</td>
+          <td>Team Alpha</td>
+          <td>2</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Alex Smith</td>
+          <td>Team Beta</td>
+          <td>1</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Mike Jordan</td>
+          <td>Team C</td>
+          <td>0</td>
+          <td>3</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About Sportelo</h3>
+        <p>Your premier destination for all sports news, matches, rankings, and more. Stay updated with the latest in the world of sports.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Matches</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Teams</a></li>
+          <li><a href="#">Rankings</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 id="contact">Contact Us</h3>
+        <ul>
+          <li>Email: sportelo.management@gmail.com</li>
+          <li>Phone: +91 9594509063</li>
+          <li>Social: WhatsApp | Instagram | YouTube</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Sportelo. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forgot Password</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background:#2c3e50;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .forgot-container {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      width: 350px;
+      text-align: center;
+    }
+
+    .forgot-container h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .forgot-container p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    .forgot-container input[type="email"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .forgot-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #4a00e0;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .forgot-container button:hover {
+      background-color: #3700b3;
+    }
+
+    .back-link {
+      margin-top: 20px;
+      display: inline-block;
+      font-size: 13px;
+      color: #4a00e0;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="forgot-container">
+    <h2>Forgot Password?</h2>
+    <p>Enter your email and we'll send you a link to reset your password.</p>
+    <form>
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Send Reset Link</button>
+    </form>
+    <a class="back-link" href="login.html">Back to Login</a>
+  </div>
+
+</body>
+</html>

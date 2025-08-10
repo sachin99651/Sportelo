@@ -1,0 +1,36 @@
+<nav class="navbar">
+    <div class="container">
+        <a href="{% url 'home' %}" class="logo">SPORTELO</a>
+        
+        <div class="navbar-links">
+            <ul class="menu">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="#featured-matches">Matches</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#">Teams</a></li>
+                <li class="dropdown">
+                    <a href="#team-ranking">Ranking <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/teamrankings">Team Ranking</a></li>
+                        <li><a href="/menrankings">Men Ranking</a></li>
+                        <li><a href="/womenrankings">Women Ranking</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <div class="auth-buttons">
+                <a href="/login" class="login-btn">Login</a>
+                <a href="/signup" class="register-btn">Register</a>
+            </div>
+        </div>
+        
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>

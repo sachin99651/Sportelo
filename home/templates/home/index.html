@@ -1,0 +1,241 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block title %}Home - Sportelo{% endblock %}
+
+{% block content %}
+<section class="hero" style= "background-image: url({% static 'img/img1.jpg'' %});">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Welcome to Sportelo</h1>
+            <p>Your ultimate sports destination for live matches, news, rankings and more.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">Explore Matches</a>
+                <a href="#" class="btn-secondary">Latest News</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="featured-matches" id="featured-matches">
+    <div class="container">
+        <h2 class="section-title">Featured Matches</h2>
+        <div class="matches-grid">
+            <!-- Match cards would be dynamically loaded here -->
+            <div class="match-card">
+                <div class="teams">
+                    <div class="team">
+                        <img src="{% static 'img/9.png' %}" alt="Team A">
+                        <span>BEL</span>
+                    </div>
+                    <div class="vs">3-1</div>
+                    <div class="team">
+                        <img src="{% static 'img/39.png' %}" alt="Team B">
+                        <span>JPN</span>
+                    </div>
+                </div>
+                <div class="match-info">
+                    <span class="league">FIH Hockey League</span>
+                    <span class="date-time">LIVE</span>
+                </div>
+            </div>
+             <!--tesing start-->
+             <div class="match-card">
+                <div class="teams">
+                    <div class="team">
+                        <img src="{% static 'img/35.png' %}"  alt="Team A">
+                        <span>IND</span>
+                    </div>
+                    <div class="vs">VS</div>
+                    <div class="team">
+                        <img src="{% static 'img/12.png' %}" alt="Team B">
+                        <span>CAN</span>
+                    </div>
+                </div>
+                <div class="match-info">
+                    <span class="league">FIH Hockey League</span>
+                    <span class="date-time">Today, 18:00</span>
+                </div>
+            </div>
+            <div class="match-card">
+                <div class="teams">
+                    <div class="team">
+                        <img src="{% static 'img/48.png' %}" alt="Team A">
+                        <span>NED</span>
+                    </div>
+                    <div class="vs">VS</div>
+                    <div class="team">
+                        <img src="{% static 'img/20.png' %}" alt="Team B">
+                        <span>ENG</span>
+                    </div>
+                </div>
+                <div class="match-info">
+                    <span class="league">FIH Hockey League</span>
+                    <span class="date-time">Today, 20:00</span>
+                </div>
+                <div class="news-meta">
+                <a href="{% url 'login' %}" class="read-more">Read More</a>
+                </div>
+            </div>
+          
+    
+    <!--testing end-->
+            
+            <!-- More match cards -->
+        </div>
+    </div>
+   
+</section>
+
+<section class="latest-news">
+    <div class="container">
+        <h2 class="section-title" id="news">Latest News</h2>
+        <div class="news-grid">
+            <!-- News articles would be dynamically loaded here -->
+            <div class="news-card">
+                <div class="news-image">
+                </div>
+                <div class="news-content">
+                    <span class="category">International</span>
+                    <h3>Team X wins championship after thrilling final</h3>
+                    <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
+                    <div class="news-meta">
+                        <span class="date">2 hours ago</span>
+                        <a href="{% url 'login' %}" class="read-more more">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="news-card">
+                <div class="news-image">
+                </div>
+                <div class="news-content">
+                    <span class="category">International</span>
+                    <h3>Team X wins championship after thrilling final</h3>
+                    <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
+                    <div class="news-meta">
+                        <span class="date">2 hours ago</span>
+                        <a href="{% url 'login' %}" class="read-more more">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- More news cards -->
+        </div>
+    </div>
+</section>
+
+<section class="ranking-section">
+    <div class="container">
+        <h2 class="section-title">Current Rankings</h2>
+        <div class="ranking-tabs">
+            <button class="tab-btn active" data-tab="team">Team Ranking</button>
+            <button class="tab-btn" data-tab="men">Men's Ranking</button>
+            <button class="tab-btn" data-tab="women">Women's Ranking</button>
+        </div>
+        
+        <div class="ranking-content">
+            <div class="tab-panel active" id="team-ranking">
+                <!-- Team ranking table would be dynamically loaded here -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Team</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>India</td>
+                            <td>1200</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Spain</td>
+                            <td>1150</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><div class="news-meta">
+                                <a href="/login" class="read-more more">More...</a>
+                                </div></td>
+                            <td></td>
+                        </tr>
+                        <!-- More rows -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="tab-panel" id="men-ranking">
+                <!-- Men's ranking content -->
+                <!-- Team ranking table would be dynamically loaded here -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Alpha</td>
+                            <td>810</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Beta</td>
+                            <td>802</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><div class="news-meta">
+                                <a href="/login" class="read-more more">More...</a>
+                                </div></td>
+                            <td></td>
+                        </tr>
+                        <!-- More rows -->
+                    </tbody>
+                </table>
+            </div>
+            </div>
+            
+            <div class="tab-panel" id="women-ranking">
+                <!-- Women's ranking content -->
+                <!-- Team ranking table would be dynamically loaded here -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Dewin</td>
+                            <td>723</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Eliza</td>
+                            <td>709</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><div class="news-meta">
+                                <a href="/login" class="read-more more">More...</a>
+                                </div></td>
+                            <td></td>
+                        </tr>
+                        <!-- More rows -->
+                    </tbody>
+                </table>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
